@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  path?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
   background: #5636d3;
   padding: 30px 0;
+
+  .active {
+    border-bottom: 2px solid #ff872c;
+  }
 
   header {
     width: 1120px;
@@ -22,6 +27,7 @@ export const Container = styled.div<ContainerProps>`
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        padding-bottom: 10px;
 
         & + a {
           margin-left: 32px;
